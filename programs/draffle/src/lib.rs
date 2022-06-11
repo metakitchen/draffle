@@ -11,7 +11,7 @@ pub const ENTRANTS_SIZE: u32 = 5000;
 pub const TIME_BUFFER: i64 = 20;
 
 #[cfg(not(feature = "production"))]
-pub const PROTOCOL_FEE_BPS: u128 = 10;
+pub const PROTOCOL_FEE_BPS: u128 = 0;
 
 #[cfg(feature = "production")]
 pub const PROTOCOL_FEE_BPS: u128 = 0;
@@ -19,14 +19,14 @@ pub const PROTOCOL_FEE_BPS: u128 = 0;
 pub mod treasury {
     use super::*;
     // Replace with your treasury, this is the default treasury for testing purposes
-    declare_id!("Treasury11111111111111111111111111111111112");
+    declare_id!("Be7f72rHrDQxWdG3TkS86ewC8xZnQTR4XYrKTgofeooT");
 }
 
 #[cfg(not(feature = "production"))]
-declare_id!("dRaFFLe111111111111111111111111111111111112");
+declare_id!("RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J");
 
 #[cfg(feature = "production")]
-declare_id!("dRafA7ymQiLKjR5dmmdZC9RPX4EQUjqYFB3mWokRuDs");
+declare_id!("RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J");
 
 #[program]
 pub mod draffle {

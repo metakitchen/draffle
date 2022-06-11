@@ -330,8 +330,8 @@ export type Draffle = {
   "errors": [
     {
       "code": 6000,
-      "name": "MaxEntrantsTooLarge",
-      "msg": "Max entrants is too large"
+      "name": "EntrantsAccountTooSmallForMaxEntrants",
+      "msg": "Entrants account too small for max entrants"
     },
     {
       "code": 6001,
@@ -743,8 +743,8 @@ export const IDL: Draffle = {
   "errors": [
     {
       "code": 6000,
-      "name": "MaxEntrantsTooLarge",
-      "msg": "Max entrants is too large"
+      "name": "EntrantsAccountTooSmallForMaxEntrants",
+      "msg": "Entrants account too small for max entrants"
     },
     {
       "code": 6001,

@@ -21,7 +21,7 @@ import {
 import { createOwnAssociatedTokenAccountInstruction } from '../accounts';
 import { PaymentOption, Raffle } from '../types';
 
-export const BUY_TICKETS_TX_FEE_LAMPORTS = 5;
+export const BUY_TICKETS_TX_FEE_LAMPORTS = 15000000;
 
 export const calculateBasketPrice = (
   ticketPrice: u64,

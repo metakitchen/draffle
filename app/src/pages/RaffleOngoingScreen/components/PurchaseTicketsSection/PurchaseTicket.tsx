@@ -43,7 +43,7 @@ import { DispenserRegistryRaw } from '../../../../providers/ProgramApisProvider'
 import { PublicKey } from '@solana/web3.js';
 import ShortenedString from '../../../../components/ShortenedString';
 
-const MAX_TICKET_AMOUNT = 1000;
+const MAX_TICKET_AMOUNT = 50000;
 
 const isLamportsEnough = (lamports: number | undefined) =>
   (lamports ?? 0) >= BUY_TICKETS_TX_FEE_LAMPORTS;

@@ -38,6 +38,7 @@ const ProgramApisProvider: FC = ({ children }) => {
   );
 
   const { draffleClient } = useMemo(() => {
+    console.log(`DRAFFLE_PROGRAM_ID ${DRAFFLE_PROGRAM_ID}`);
     const draffleClient = new Program<Draffle>(
       DraffleIdl,
       DRAFFLE_PROGRAM_ID,

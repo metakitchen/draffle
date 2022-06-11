@@ -1,11 +1,14 @@
 anchor_version = "0.17.0"
 
 [provider]
-cluster = "mainnet"
-wallet = "~/.config/solana/id.json"
+cluster = "devnet"
+wallet = "~/.config/solana/mint-keypair.json"
+
+[programs.devnet]
+draffle = "RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J"
 
 [programs.mainnet]
-draffle = "dRafA7ymQiLKjR5dmmdZC9RPX4EQUjqYFB3mWokRuDs"
+draffle = "RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J"
 
 [scripts]
 test = "mocha -t 1000000 tests"

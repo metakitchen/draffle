@@ -68,12 +68,12 @@ const tokenRegistry = {
     logoURI: '/dRaffle-logo.png',
     tags: []
   },
-  '7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU': {
+  '7XvniZcazdU139kjNUsqeeLvJGtTGEFfbwJTGhpxUur': {
     chainId: 101,
-    address: '7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU',
-    symbol: 'SAMO',
-    name: 'SAMO',
-    decimals: 9,
+    address: '7XvniZcazdU139kjNUsqeeLvJGtTGEFfbwJTGhpxUur',
+    symbol: 'TestCoin',
+    name: 'TestCoin',
+    decimals: 0,
     logoURI: '/resources/samo-logo.png',
     tags: []
   }
