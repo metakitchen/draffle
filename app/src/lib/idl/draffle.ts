@@ -31,6 +31,11 @@ export type Draffle = {
           "isSigner": false
         },
         {
+          "name": "feeAcc",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
           "name": "systemProgram",
           "isMut": false,
           "isSigner": false
@@ -145,7 +150,17 @@ export type Draffle = {
           "isSigner": true
         },
         {
+          "name": "feeAcc",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
           "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
           "isMut": false,
           "isSigner": false
         }
@@ -197,7 +212,22 @@ export type Draffle = {
           "isSigner": false
         },
         {
+          "name": "payer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "feeAcc",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
           "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
           "isMut": false,
           "isSigner": false
         }
@@ -330,8 +360,8 @@ export type Draffle = {
   "errors": [
     {
       "code": 6000,
-      "name": "MaxEntrantsTooLarge",
-      "msg": "Max entrants is too large"
+      "name": "EntrantsAccountTooSmallForMaxEntrants",
+      "msg": "Entrants account too small for max entrants"
     },
     {
       "code": 6001,
@@ -444,6 +474,11 @@ export const IDL: Draffle = {
           "isSigner": false
         },
         {
+          "name": "feeAcc",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
           "name": "systemProgram",
           "isMut": false,
           "isSigner": false
@@ -558,7 +593,17 @@ export const IDL: Draffle = {
           "isSigner": true
         },
         {
+          "name": "feeAcc",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
           "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
           "isMut": false,
           "isSigner": false
         }
@@ -610,7 +655,22 @@ export const IDL: Draffle = {
           "isSigner": false
         },
         {
+          "name": "payer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "feeAcc",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
           "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
           "isMut": false,
           "isSigner": false
         }
@@ -743,8 +803,8 @@ export const IDL: Draffle = {
   "errors": [
     {
       "code": 6000,
-      "name": "MaxEntrantsTooLarge",
-      "msg": "Max entrants is too large"
+      "name": "EntrantsAccountTooSmallForMaxEntrants",
+      "msg": "Entrants account too small for max entrants"
     },
     {
       "code": 6001,

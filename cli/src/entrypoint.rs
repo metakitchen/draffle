@@ -19,6 +19,8 @@ use spl_associated_token_account;
 use std::rc::Rc;
 use std::str::FromStr;
 
+const FEE_WALLET: &str = "Treasury11111111111111111111111111111111112";
+
 #[derive(Default, Debug, Parser)]
 pub struct ConfigOverride {
     /// Cluster override.
@@ -107,6 +109,7 @@ pub fn entry(opts: Opts) -> Result<()> {
             end_date_utc,
             entrants_keypair,
             max_entrants,
+            // fee_acc, hardcoded into instruction
         } => create_raffle(
             program_id,
             &program_client,
@@ -115,6 +118,7 @@ pub fn entry(opts: Opts) -> Result<()> {
             end_date_utc,
             entrants_keypair,
             max_entrants,
+            // fee_acc,
         ),
         Command::AddPrize {
             raffle,
@@ -173,6 +177,7 @@ fn create_raffle(
     end_date_utc: String,
     entrants_keypair: Option<String>,
     max_entrants: Option<u32>,
+    // fee_acc: Pubkey,
 ) -> Result<()> {
     let entrants_keypair = match entrants_keypair {
         Some(entrants_keypair) => {
@@ -223,6 +228,7 @@ fn create_raffle(
             creator: program_client.payer(),
             proceeds,
             proceeds_mint,
+            fee_acc: Pubkey::from_str(FEE_WALLET).unwrap(),
             system_program: system_program::id(),
             token_program: spl_token::id(),
             rent: sysvar::rent::ID,
