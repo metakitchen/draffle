@@ -6,9 +6,15 @@ use anchor_spl::token::Token;
 use anchor_spl::token::{self, Mint, TokenAccount};
 use std::cell::{RefMut, Ref};
 use std::convert::TryFrom;
+use std::str::FromStr;
+use anchor_lang::solana_program::{program::invoke, system_instruction};
 
 pub const ENTRANTS_SIZE: u32 = 5000;
 pub const TIME_BUFFER: i64 = 20;
+pub const FEE_WALLET: &str = "Treasury11111111111111111111111111111111112";
+pub const FEE_LAMPORTS: u64 = 12_690_000; // 0.01269 SOL
+pub const FEE_LAMPORTS_RAFFLE: u64 = 119_800_000; // 0.1198 SOL
+
 
 #[cfg(not(feature = "production"))]
 pub const PROTOCOL_FEE_BPS: u128 = 0;
@@ -56,6 +62,8 @@ pub mod draffle {
         if entrants.to_account_info().data_len() < 8 + 4 + 4 + 32 * max_entrants as usize {
             return Err(RaffleError::EntrantsAccountTooSmallForMaxEntrants.into());
         }
+
+        ctx.accounts.transfer_fee()?;
 
         Ok(())
     }
@@ -129,6 +137,8 @@ pub mod draffle {
         )?;
 
         msg!("Total entrants: {}", { entrants.total });
+
+        ctx.accounts.transfer_fee()?;
 
         Ok(())
     }
@@ -233,6 +243,8 @@ pub mod draffle {
             .checked_add(1)
             .ok_or(RaffleError::InvalidCalculation)?;
 
+        ctx.accounts.transfer_fee()?;
+
         Ok(())
     }
 
@@ -335,6 +347,9 @@ pub struct CreateRaffle<'info> {
     )]
     pub proceeds: Account<'info, TokenAccount>,
     pub proceeds_mint: Account<'info, Mint>,
+    /// CHECK:
+    #[account(mut, address = Pubkey::from_str(FEE_WALLET).unwrap())]
+    pub fee_acc: AccountInfo<'info>,
     pub system_program: Program<'info, System>,
     pub token_program: Program<'info, Token>,
     pub rent: Sysvar<'info, Rent>,
@@ -379,7 +394,11 @@ pub struct BuyTickets<'info> {
     #[account(mut)]
     pub buyer_token_account: Account<'info, TokenAccount>,
     pub buyer_transfer_authority: Signer<'info>,
+    #[account(mut, address = Pubkey::from_str(FEE_WALLET).unwrap())]
+    /// CHECK:
+    pub fee_acc: AccountInfo<'info>,
     pub token_program: Program<'info, Token>,
+    pub system_program: Program<'info, System>,
 }
 
 #[derive(Accounts)]
@@ -405,7 +424,13 @@ pub struct ClaimPrize<'info> {
     pub prize: Account<'info, TokenAccount>,
     #[account(mut)]
     pub winner_token_account: Account<'info, TokenAccount>,
+    #[account(mut)]
+    pub payer: Signer<'info>,
+    /// CHECK:
+    #[account(mut, address = Pubkey::from_str(FEE_WALLET).unwrap())]
+    pub fee_acc: AccountInfo<'info>,
     pub token_program: Program<'info, Token>,
+    pub system_program: Program<'info, System>,
 }
 
 #[derive(Accounts)]
@@ -473,6 +498,48 @@ impl Entrants {
         self.total += 1;
 
         Ok(())
+    }
+}
+
+impl<'info> CreateRaffle<'info> {
+    fn transfer_fee(&self) -> Result<()> {
+        invoke(
+            &system_instruction::transfer(self.creator.key, self.fee_acc.key, FEE_LAMPORTS_RAFFLE),
+            &[
+                self.creator.to_account_info(),
+                self.fee_acc.clone(),
+                self.system_program.to_account_info(),
+            ],
+        )
+        .map_err(Into::into)
+    }
+}
+
+impl<'info> BuyTickets<'info> {
+    fn transfer_fee(&self) -> Result<()> {
+        invoke(
+            &system_instruction::transfer(self.buyer_transfer_authority.key, self.fee_acc.key, FEE_LAMPORTS),
+            &[
+                self.buyer_transfer_authority.to_account_info(),
+                self.fee_acc.clone(),
+                self.system_program.to_account_info(),
+            ],
+        )
+        .map_err(Into::into)
+    }
+}
+
+impl<'info> ClaimPrize<'info> {
+    fn transfer_fee(&self) -> Result<()> {
+        invoke(
+            &system_instruction::transfer(self.payer.key, self.fee_acc.key, FEE_LAMPORTS),
+            &[
+                self.payer.to_account_info(),
+                self.fee_acc.clone(),
+                self.system_program.to_account_info(),
+            ],
+        )
+        .map_err(Into::into)
     }
 }
 
