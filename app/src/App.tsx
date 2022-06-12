@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { CssBaseline } from '@material-ui/core';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
 import { Router } from './router/router';
@@ -18,7 +18,7 @@ const App = () => {
     <ViewportProvider>
       <CssBaseline />
       <ThemeProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Wallet>
             <ProgramApisProvider>
               <RafflesStoreProvider>
@@ -34,7 +34,7 @@ const App = () => {
               </RafflesStoreProvider>
             </ProgramApisProvider>
           </Wallet>
-        </BrowserRouter>
+        </HashRouter>
       </ThemeProvider>
     </ViewportProvider>
   );

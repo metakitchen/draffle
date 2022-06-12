@@ -42,9 +42,6 @@ const ExploreRafflesScreen: FC = () => {
   if (raffles.size === 0 && fetching)
     return (
       <>
-        <Typography variant="h1" className={classes.titleBar}>
-          Explore dRaffles
-        </Typography>
         <div className={classes.mainContent}>
           <CircularProgress color="secondary" />
         </div>
@@ -54,9 +51,6 @@ const ExploreRafflesScreen: FC = () => {
   if (raffles.size === 0)
     return (
       <>
-        <Typography variant="h1" className={classes.titleBar}>
-          Explore dRaffles
-        </Typography>
         <Typography variant="h4" className={classes.mainContent}>
           dRaffles will be coming soon!
         </Typography>
@@ -65,9 +59,6 @@ const ExploreRafflesScreen: FC = () => {
 
   return (
     <>
-      <Typography variant="h1" className={classes.titleBar}>
-        Explore dRaffles
-      </Typography>
       <FilterBar
         hideEndedRaffles={hideEndedRaffles}
         setHideEndedRaffles={setHideEndedRaffles}

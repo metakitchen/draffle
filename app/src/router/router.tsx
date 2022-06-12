@@ -12,7 +12,7 @@ import ToolsScreen from '../pages/ToolsScreen';
 
 export const Router: FC = () => (
   <Switch>
-    <Route path="/" exact component={LandingScreen} />
+    <Route path="/" exact component={ExploreRafflesScreen} />
     <Route path={`${routes.RAFFLES}/:id`} component={RaffleDetailsScreen} />
     <Route path={routes.RAFFLES} exact component={ExploreRafflesScreen} />
     <Route path={routes.STAKE} exact component={StakeScreen} />
