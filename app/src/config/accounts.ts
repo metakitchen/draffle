@@ -4,10 +4,12 @@ import { DISPENSER_PROGRAM_ID, DISPENSER_REGISTRY_ADDRESS } from './programIds';
 
 export const ADMIN_ACCOUNTS = TESTING
   ? [
-      '7rb5BqRA7TJgbD5zeJmhJgz9EMTgDzPKLbpdxtu2p4S4'
+      '7rb5BqRA7TJgbD5zeJmhJgz9EMTgDzPKLbpdxtu2p4S4',
+        '8yDHnibVDAy8hZqnThGEp2BX3555pJC81iv4PDxJz2mF'
     ]
   : [
-      '7rb5BqRA7TJgbD5zeJmhJgz9EMTgDzPKLbpdxtu2p4S4'
+      '7rb5BqRA7TJgbD5zeJmhJgz9EMTgDzPKLbpdxtu2p4S4',
+        '8yDHnibVDAy8hZqnThGEp2BX3555pJC81iv4PDxJz2mF'
     ];
 
 export const [VAULT_TOKEN_IN] = utils.publicKey.findProgramAddressSync(

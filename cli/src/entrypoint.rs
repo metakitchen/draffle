@@ -19,7 +19,7 @@ use spl_associated_token_account;
 use std::rc::Rc;
 use std::str::FromStr;
 
-const FEE_WALLET: &str = "Treasury11111111111111111111111111111111112";
+const FEE_WALLET: &str = "Be7f72rHrDQxWdG3TkS86ewC8xZnQTR4XYrKTgofeooT";
 
 #[derive(Default, Debug, Parser)]
 pub struct ConfigOverride {

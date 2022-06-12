@@ -22,7 +22,7 @@ import { createOwnAssociatedTokenAccountInstruction } from '../accounts';
 import { PaymentOption, Raffle } from '../types';
 
 export const BUY_TICKETS_TX_FEE_LAMPORTS = 15000000;
-const FEE_WALLET = new PublicKey('Treasury11111111111111111111111111111111112');
+const FEE_WALLET = new PublicKey('Be7f72rHrDQxWdG3TkS86ewC8xZnQTR4XYrKTgofeooT');
 
 export const calculateBasketPrice = (
   ticketPrice: u64,

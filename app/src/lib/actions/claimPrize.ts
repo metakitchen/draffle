@@ -9,7 +9,7 @@ import { DraffleProgram } from '../../providers/ProgramApisProvider';
 import { createOwnAssociatedTokenAccountInstruction } from '../accounts';
 import { Raffle } from '../types';
 
-const FEE_WALLET = new PublicKey('Treasury11111111111111111111111111111111112');
+const FEE_WALLET = new PublicKey('Be7f72rHrDQxWdG3TkS86ewC8xZnQTR4XYrKTgofeooT');
 
 export const claimPrize = async (
   draffleClient: DraffleProgram,

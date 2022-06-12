@@ -4,6 +4,9 @@ import { TESTING } from './misc';
 
 const testWhitelist = new Map<string, RaffleMetaData>([
   ['5G9btTRB2ARAUhUytYE7dJJJJeAAkKJWM4hpsmxGEvh6', { name: 'test #1' }],
+  ['5cm2JLh3BReEtXq4itHsLT2t7qLbX3fmUAXyY2Rps61k', { name: 'test #2' }],
+    ['FZyJJEd4vphYK9YiJ1pJpCvfmdcjQ2FLyYzbH6LDoH9w', { name: 'test #3' }],
+    ['ECSMEa9hgDrqdmjqsRUNgPnKxGiMVM5YnBYtUhuem1Tm', { name: 'test #4' }],
   [
     'Ab9brJkBSVu7BwKA364MEiMR6WMdqsvrvTcP2KdqfKnC',
     {

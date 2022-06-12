@@ -10,6 +10,7 @@ anchor build
 solana config set -k ~/.config/solana/deploy-keypair.json
 ```
 ```
+
 solana program deploy --program-id ~/.config/solana/draffle-keypair.json target/deploy/draffle.so -u d
 ```
 
@@ -24,8 +25,8 @@ solana config set -k ~/.config/solana/mint-keypair.json
    target/debug/draffle create-raffle \
        7XvniZcazdU139kjNUsqeeLvJGtTGEFfbwJTGhpxUur \
        1 \
-       "2022-06-20 08:00" \
-       --max-entrants 2500 \
+       "2022-06-11 23:22" \
+       --max-entrants 5000 \
        --provider.cluster devnet \
        --provider.wallet ~/.config/solana/mint-keypair.json \
        --program-id RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J
@@ -66,8 +67,8 @@ solana config set -k ~/.config/solana/mint-keypair.json
 
    ```bash
    target/debug/draffle add-prize \
-       5G9btTRB2ARAUhUytYE7dJJJJeAAkKJWM4hpsmxGEvh6 \
-       GBNamuwY4zKzMaaa4hTCQpFDJomTfN5i1owgq928hksG \
+       5cm2JLh3BReEtXq4itHsLT2t7qLbX3fmUAXyY2Rps61k \
+       BHM8ASPFJJuc6ZGGzDvP5cXQW151Ds77M3K9ygGS55W4 \
        1 \
        0 \
        --provider.cluster devnet \

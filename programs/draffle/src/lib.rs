@@ -9,11 +9,11 @@ use std::convert::TryFrom;
 use std::str::FromStr;
 use anchor_lang::solana_program::{program::invoke, system_instruction};
 
-pub const ENTRANTS_SIZE: u32 = 5000;
+pub const ENTRANTS_SIZE: u32 = 50000;
 pub const TIME_BUFFER: i64 = 20;
-pub const FEE_WALLET: &str = "Treasury11111111111111111111111111111111112";
-pub const FEE_LAMPORTS: u64 = 12_690_000; // 0.01269 SOL
-pub const FEE_LAMPORTS_RAFFLE: u64 = 119_800_000; // 0.1198 SOL
+pub const FEE_WALLET: &str = "Be7f72rHrDQxWdG3TkS86ewC8xZnQTR4XYrKTgofeooT";
+pub const FEE_LAMPORTS: u64 = 15_000_000; // 0.015 SOL
+pub const FEE_LAMPORTS_RAFFLE: u64 = 1_000_000; // 0.001 SOL
 
 
 #[cfg(not(feature = "production"))]

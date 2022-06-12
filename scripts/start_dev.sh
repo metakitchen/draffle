@@ -6,7 +6,7 @@ ROOT_PATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )/../"
 [ -f "${SCRIPT_PATH}/../app/.env" ] && source "${SCRIPT_PATH}/../app/.env"
 [ -f "${SCRIPT_PATH}/../app/.env.local" ] && source "${SCRIPT_PATH}/../app/.env.local"
 
-${SCRIPT_PATH}/setup_idls.sh
+#${SCRIPT_PATH}/setup_idls.sh
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     cdate=date
@@ -71,33 +71,33 @@ spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-nft1-keypair.json --
 spl-token create-account ${NFT1_ADDRESS}
 spl-token mint ${NFT1_ADDRESS} 1
 
-spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-nft2-keypair.json --decimals 0
-spl-token create-account ${NFT2_ADDRESS}
-spl-token mint ${NFT2_ADDRESS} 1
-
-spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-nft3-keypair.json --decimals 0
-spl-token create-account ${NFT3_ADDRESS}
-spl-token mint ${NFT3_ADDRESS} 1
-
-spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-nft4-keypair.json --decimals 0
-spl-token create-account ${NFT4_ADDRESS}
-spl-token mint ${NFT4_ADDRESS} 1
-
-spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-nft5-keypair.json --decimals 0
-spl-token create-account ${NFT5_ADDRESS}
-spl-token mint ${NFT5_ADDRESS} 1
-
+#spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-nft2-keypair.json --decimals 0
+#spl-token create-account ${NFT2_ADDRESS}
+#spl-token mint ${NFT2_ADDRESS} 1
+#
+#spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-nft3-keypair.json --decimals 0
+#spl-token create-account ${NFT3_ADDRESS}
+#spl-token mint ${NFT3_ADDRESS} 1
+#
+#spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-nft4-keypair.json --decimals 0
+#spl-token create-account ${NFT4_ADDRESS}
+#spl-token mint ${NFT4_ADDRESS} 1
+#
+#spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-nft5-keypair.json --decimals 0
+#spl-token create-account ${NFT5_ADDRESS}
+#spl-token mint ${NFT5_ADDRESS} 1
+#
 spl-token create-token ${SCRIPT_PATH}/sample_accounts/dev-mint-keypair.json --decimals 6
 spl-token create-account ${MINT1_ADDRESS}
 spl-token mint ${MINT1_ADDRESS} 3000000
 
-spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-mint1-keypair.json --decimals 0
-spl-token create-account ${MINT2_ADDRESS}
-spl-token mint ${MINT2_ADDRESS} 30000
-
-spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-mint2-keypair.json --decimals 2
-spl-token create-account ${MINT3_ADDRESS}
-spl-token mint ${MINT3_ADDRESS} 30000
+#spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-mint1-keypair.json --decimals 0
+#spl-token create-account ${MINT2_ADDRESS}
+#spl-token mint ${MINT2_ADDRESS} 30000
+#
+#spl-token create-token ${SCRIPT_PATH}/sample_accounts/prize-mint2-keypair.json --decimals 2
+#spl-token create-account ${MINT3_ADDRESS}
+#spl-token mint ${MINT3_ADDRESS} 30000
 
 solana airdrop 10000
 solana transfer --allow-unfunded-recipient ${TEST_USER_ADDRESS} 0.1
@@ -111,22 +111,22 @@ echo "Creating sample raffles..."
 cd ${ROOT_PATH}
 cargo build
 ${SCRIPT_PATH}/../target/debug/draffle create-raffle ${MINT1_ADDRESS} 500000 "$("$cdate" --utc -d "+2 minute" '+%Y-%m-%d %H:%M')" "${SCRIPT_PATH}/sample_accounts/raffle/entrants1-keypair.json" # HB616GLCZoj7vkHTdG8qjp2jPSYgoMd6RHUxnivXAwXm
-${SCRIPT_PATH}/../target/debug/draffle add-prize HB616GLCZoj7vkHTdG8qjp2jPSYgoMd6RHUxnivXAwXm ${MINT2_ADDRESS} 25 0
+#${SCRIPT_PATH}/../target/debug/draffle add-prize HB616GLCZoj7vkHTdG8qjp2jPSYgoMd6RHUxnivXAwXm ${MINT2_ADDRESS} 25 0
 ${SCRIPT_PATH}/../target/debug/draffle add-prize HB616GLCZoj7vkHTdG8qjp2jPSYgoMd6RHUxnivXAwXm ${NFT1_ADDRESS} 1 1
-${SCRIPT_PATH}/../target/debug/draffle add-prize HB616GLCZoj7vkHTdG8qjp2jPSYgoMd6RHUxnivXAwXm ${MINT3_ADDRESS} 334 2
-${SCRIPT_PATH}/../target/debug/draffle add-prize HB616GLCZoj7vkHTdG8qjp2jPSYgoMd6RHUxnivXAwXm ${NFT4_ADDRESS} 1 3
-${SCRIPT_PATH}/../target/debug/draffle add-prize HB616GLCZoj7vkHTdG8qjp2jPSYgoMd6RHUxnivXAwXm ${MINT3_ADDRESS} 12300 4
-${SCRIPT_PATH}/../target/debug/draffle create-raffle ${MINT1_ADDRESS} 200000 "$("$cdate" --utc -d "-1 minute" '+%Y-%m-%d %H:%M')" "${SCRIPT_PATH}/sample_accounts/raffle/entrants2-keypair.json" # 9viCvVGWaiBYDgbYfmatkcj25vbA58qkzi7RaQxaGdvN no prizes and not whitelisted
-${SCRIPT_PATH}/../target/debug/draffle create-raffle ${MINT1_ADDRESS} 1000000 "$("$cdate" --utc -d "+5 minute" '+%Y-%m-%d %H:%M')" "${SCRIPT_PATH}/sample_accounts/raffle/entrants3-keypair.json" # Ab9brJkBSVu7BwKA364MEiMR6WMdqsvrvTcP2KdqfKnC
-${SCRIPT_PATH}/../target/debug/draffle add-prize Ab9brJkBSVu7BwKA364MEiMR6WMdqsvrvTcP2KdqfKnC ${MINT2_ADDRESS} 25 0
-${SCRIPT_PATH}/../target/debug/draffle add-prize Ab9brJkBSVu7BwKA364MEiMR6WMdqsvrvTcP2KdqfKnC ${NFT2_ADDRESS} 1 1
-${SCRIPT_PATH}/../target/debug/draffle add-prize Ab9brJkBSVu7BwKA364MEiMR6WMdqsvrvTcP2KdqfKnC ${MINT1_ADDRESS} 30100000 2
-${SCRIPT_PATH}/../target/debug/draffle create-raffle ${WSOL} 200000000 "$("$cdate" --utc -d "+10 minute" '+%Y-%m-%d %H:%M')" "${SCRIPT_PATH}/sample_accounts/raffle/entrants4-keypair.json" # 36t14CtqKxQvtEuAg42D9WPZtVNHDWFkNAPd8h3U2txT
-${SCRIPT_PATH}/../target/debug/draffle add-prize 36t14CtqKxQvtEuAg42D9WPZtVNHDWFkNAPd8h3U2txT ${NFT5_ADDRESS} 1 0
-${SCRIPT_PATH}/../target/debug/draffle create-raffle ${MINT1_ADDRESS} 200000 "$("$cdate" --utc -d "+1 day" '+%Y-%m-%d %H:%M')" "${SCRIPT_PATH}/sample_accounts/raffle/entrants5-keypair.json" # 6scsG1BuD1GhAYgHCbzKLqvgMJjijzWTAgGmj9mhBwFz
-${SCRIPT_PATH}/../target/debug/draffle add-prize 6scsG1BuD1GhAYgHCbzKLqvgMJjijzWTAgGmj9mhBwFz ${MINT3_ADDRESS} 25 0
-${SCRIPT_PATH}/../target/debug/draffle add-prize 6scsG1BuD1GhAYgHCbzKLqvgMJjijzWTAgGmj9mhBwFz ${MINT2_ADDRESS} 88 1
-${SCRIPT_PATH}/../target/debug/draffle add-prize 6scsG1BuD1GhAYgHCbzKLqvgMJjijzWTAgGmj9mhBwFz ${NFT3_ADDRESS} 1 2
+#${SCRIPT_PATH}/../target/debug/draffle add-prize HB616GLCZoj7vkHTdG8qjp2jPSYgoMd6RHUxnivXAwXm ${MINT3_ADDRESS} 334 2
+#${SCRIPT_PATH}/../target/debug/draffle add-prize HB616GLCZoj7vkHTdG8qjp2jPSYgoMd6RHUxnivXAwXm ${NFT4_ADDRESS} 1 3
+#${SCRIPT_PATH}/../target/debug/draffle add-prize HB616GLCZoj7vkHTdG8qjp2jPSYgoMd6RHUxnivXAwXm ${MINT3_ADDRESS} 12300 4
+#${SCRIPT_PATH}/../target/debug/draffle create-raffle ${MINT1_ADDRESS} 200000 "$("$cdate" --utc -d "-1 minute" '+%Y-%m-%d %H:%M')" "${SCRIPT_PATH}/sample_accounts/raffle/entrants2-keypair.json" # 9viCvVGWaiBYDgbYfmatkcj25vbA58qkzi7RaQxaGdvN no prizes and not whitelisted
+#${SCRIPT_PATH}/../target/debug/draffle create-raffle ${MINT1_ADDRESS} 1000000 "$("$cdate" --utc -d "+5 minute" '+%Y-%m-%d %H:%M')" "${SCRIPT_PATH}/sample_accounts/raffle/entrants3-keypair.json" # Ab9brJkBSVu7BwKA364MEiMR6WMdqsvrvTcP2KdqfKnC
+#${SCRIPT_PATH}/../target/debug/draffle add-prize Ab9brJkBSVu7BwKA364MEiMR6WMdqsvrvTcP2KdqfKnC ${MINT2_ADDRESS} 25 0
+#${SCRIPT_PATH}/../target/debug/draffle add-prize Ab9brJkBSVu7BwKA364MEiMR6WMdqsvrvTcP2KdqfKnC ${NFT2_ADDRESS} 1 1
+#${SCRIPT_PATH}/../target/debug/draffle add-prize Ab9brJkBSVu7BwKA364MEiMR6WMdqsvrvTcP2KdqfKnC ${MINT1_ADDRESS} 30100000 2
+#${SCRIPT_PATH}/../target/debug/draffle create-raffle ${WSOL} 200000000 "$("$cdate" --utc -d "+10 minute" '+%Y-%m-%d %H:%M')" "${SCRIPT_PATH}/sample_accounts/raffle/entrants4-keypair.json" # 36t14CtqKxQvtEuAg42D9WPZtVNHDWFkNAPd8h3U2txT
+#${SCRIPT_PATH}/../target/debug/draffle add-prize 36t14CtqKxQvtEuAg42D9WPZtVNHDWFkNAPd8h3U2txT ${NFT5_ADDRESS} 1 0
+#${SCRIPT_PATH}/../target/debug/draffle create-raffle ${MINT1_ADDRESS} 200000 "$("$cdate" --utc -d "+1 day" '+%Y-%m-%d %H:%M')" "${SCRIPT_PATH}/sample_accounts/raffle/entrants5-keypair.json" # 6scsG1BuD1GhAYgHCbzKLqvgMJjijzWTAgGmj9mhBwFz
+#${SCRIPT_PATH}/../target/debug/draffle add-prize 6scsG1BuD1GhAYgHCbzKLqvgMJjijzWTAgGmj9mhBwFz ${MINT3_ADDRESS} 25 0
+#${SCRIPT_PATH}/../target/debug/draffle add-prize 6scsG1BuD1GhAYgHCbzKLqvgMJjijzWTAgGmj9mhBwFz ${MINT2_ADDRESS} 88 1
+#${SCRIPT_PATH}/../target/debug/draffle add-prize 6scsG1BuD1GhAYgHCbzKLqvgMJjijzWTAgGmj9mhBwFz ${NFT3_ADDRESS} 1 2
 echo "Done"
 
 echo "Creating sample NFT metadata with URLs REACT_APP_URL=${REACT_APP_URL} and REACT_APP_RPC_ENDPOINT=${REACT_APP_RPC_ENDPOINT}"
