@@ -43,7 +43,7 @@ import { DispenserRegistryRaw } from '../../../../providers/ProgramApisProvider'
 import { PublicKey } from '@solana/web3.js';
 import ShortenedString from '../../../../components/ShortenedString';
 
-const MAX_TICKET_AMOUNT = 50000;
+const MAX_TICKET_AMOUNT = 500;
 
 const isLamportsEnough = (lamports: number | undefined) =>
   (lamports ?? 0) >= BUY_TICKETS_TX_FEE_LAMPORTS;
@@ -207,6 +207,11 @@ export const PurchaseTickets: FC<PurchaseTicketsProps> = ({
   const lamportsEnough = useMemo(
     () => isLamportsEnough(walletLamports),
     [walletLamports]
+  );
+
+  const soldOut = useMemo(
+      ()=> raffle.totalTickets + ticketAmount >  raffle.entrantsCap,
+      [raffle]
   );
   const buyerTokenBalance = useMemo(() => {
     return paymentOption.mint.publicKey.toBase58() === wrappedSOL
@@ -492,7 +497,7 @@ export const PurchaseTickets: FC<PurchaseTicketsProps> = ({
           onClick={onBuyTickets}
           disabled={
             ticketAmount === 0 ||
-            raffle.totalTickets + ticketAmount > MAX_NUMBER_OF_PARTICIPANTS ||
+            raffle.totalTickets + ticketAmount > MAX_NUMBER_OF_PARTICIPANTS || soldOut ||
             !hasEnoughFunds ||
             purchaseOngoing
           }
@@ -512,7 +517,7 @@ export const PurchaseTickets: FC<PurchaseTicketsProps> = ({
                 <div className={classes.purchaseButtonContentRight} />
               </>
             ) : (
-              <>Buy ticket {!lamportsEnough && '(Insufficient SOL)'}</>
+              <>Buy ticket {!lamportsEnough && '(Insufficient SOL)'} {soldOut && '(Sold Out)'}</>
             )}
           </div>
         </Button>
