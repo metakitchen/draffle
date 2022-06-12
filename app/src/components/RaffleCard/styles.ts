@@ -52,7 +52,7 @@ export const useStyles = makeStyles<Theme, { device: DeviceType }>(
     },
     label: {
       fontSize: '10px',
-      color: '#777',
+      color: '#FFF',
     },
     ticketsSold: {
       width: '50%',
@@ -78,7 +78,7 @@ export const useStyles = makeStyles<Theme, { device: DeviceType }>(
       position: 'absolute',
       top: '5px',
       left: '5px',
-      color: 'black',
+      color: 'white',
       backgroundColor: theme.palette.secondary.main,
       borderRadius: '2px',
       boxShadow: '0 2px 6px 0 #000',
@@ -86,7 +86,7 @@ export const useStyles = makeStyles<Theme, { device: DeviceType }>(
     cardEndedBadge: {
       fontSize: '12px',
       fontWeight: 'bold',
-      width: '50px',
+      width: '75px',
       textAlign: 'center',
       padding: '2px',
       position: 'absolute',

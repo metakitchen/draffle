@@ -63,7 +63,9 @@ const RaffleEndedScreen: FC<IRaffleEndedScreenProps> = ({
         updateRaffle();
         toast.success('Prize claimed, check your wallet!');
       } catch (error: any) {
+        console.log(error);
         if (error.msg) {
+
           toast.error(`Transaction failed: ${error.msg}`);
         } else {
           toast.error('Unexpected error');

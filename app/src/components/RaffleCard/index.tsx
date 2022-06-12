@@ -60,6 +60,9 @@ const RaffleCard: FC<RaffleCardProps> = ({
       <div className={classes.cardPrizesBadge}>
         {raffle.prizes.length} prize{raffle.prizes.length > 1 && 's'}
       </div>
+      {raffle.totalTickets >=  raffle.entrantsCap && (
+          <div className={classes.cardEndedBadge}>Sold&nbsp;Out</div>
+      )}
       {new Date() > raffle.endTimestamp && (
         <div className={classes.cardEndedBadge}>Ended</div>
       )}

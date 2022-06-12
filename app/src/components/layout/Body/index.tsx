@@ -16,6 +16,7 @@ export const Body: FC<BodyProps> = ({ children }) => {
         padding: '0 10px',
         display: ' flex',
         alignItems: 'center',
+          backgroundColor:'#000',
       }}
     >
       <Box className={classes.root}>{children}</Box>

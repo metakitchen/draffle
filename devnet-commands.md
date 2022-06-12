@@ -25,8 +25,8 @@ solana config set -k ~/.config/solana/mint-keypair.json
    target/debug/draffle create-raffle \
        7XvniZcazdU139kjNUsqeeLvJGtTGEFfbwJTGhpxUur \
        1 \
-       "2022-06-11 23:22" \
-       --max-entrants 5000 \
+       "2022-06-12 06:44" \
+       --max-entrants 1000 \
        --provider.cluster devnet \
        --provider.wallet ~/.config/solana/mint-keypair.json \
        --program-id RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J

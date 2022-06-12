@@ -1,13 +1,13 @@
 import { createTheme } from '@material-ui/core/styles';
 import { DeviceType } from '../providers/ViewportProvider';
 
-const PRIMARY_COLOR = '#e86bff';
-const SECONDARY_COLOR = '#01ffa3';
+const PRIMARY_COLOR = '#E7001B';
+const SECONDARY_COLOR = '#E7001B';
 
 const theme = ({ device }: { device: DeviceType }) =>
   createTheme({
     typography: {
-      allVariants: { color: '#FFF', fontFamily: 'Roboto Mono' },
+      allVariants: { color: '#FFF', fontFamily: 'Mark Pro' },
       h1: {
         color: PRIMARY_COLOR,
         textAlign: 'center',

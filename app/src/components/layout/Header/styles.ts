@@ -1,27 +1,27 @@
-import { Theme } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import {Theme} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core/styles';
 
-import { DeviceType } from '../../../providers/ViewportProvider';
+import {DeviceType} from '../../../providers/ViewportProvider';
 
 export const useStyles = makeStyles<Theme, { device: DeviceType }>(
   (theme: Theme) => ({
     root: ({ device }) => ({
       width: '100%',
-      height: device === DeviceType.Phone ? '50px' : '90px',
+      height: device === DeviceType.Phone ? '50px' : '64px',
     }),
     drawerHeader: () => ({
-      width: '100%',
+      maxWidth: '1024px',
       height: '50px',
       display: 'flex',
       justifyContent: 'space-between',
       padding: theme.spacing(0, 1),
     }),
     appBar: ({ device }) => ({
-      height: device === DeviceType.Phone ? '50px' : '90px',
+      height: device === DeviceType.Phone ? '50px' : '64px',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      backgroundColor: 'rgba(6,18,98,1)',
+        backgroundColor: 'rgba(0,0,0)',
       alignItems: 'center',
       boxShadow: '0 0 10px 0 #000',
       zIndex: 99,
@@ -33,6 +33,7 @@ export const useStyles = makeStyles<Theme, { device: DeviceType }>(
     },
     homeButton: () => ({
       marginLeft: '30px',
+        padding: '0px',
       color: theme.palette.primary.dark,
       '&:hover': {
         backgroundColor: 'transparent',

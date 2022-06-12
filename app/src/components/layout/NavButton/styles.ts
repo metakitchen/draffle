@@ -5,11 +5,9 @@ export const useStyles = makeStyles<Theme, { isCurrent: boolean }>(
   (theme: Theme) => ({
     navButtons: ({ isCurrent }) => ({
       fontSize: '16px',
-      color: isCurrent
-        ? darken(theme.palette.secondary.main, 0.1)
-        : theme.palette.primary.main,
+      color: '#FFF',
       '&:hover': {
-        textShadow: '0px 0px 5px #e86bff',
+        textShadow: '0px 0px 5px #555555',
         backgroundColor: 'transparent',
       },
     }),

@@ -6,7 +6,7 @@ export const useStyles = makeStyles<Theme>((theme: Theme) => ({
     width: '100%',
   },
   paper: {
-    backgroundColor: 'rgba(57,9,74,1)',
+    backgroundColor: 'rgba(0, 0, 0)',
   },
   drawerHeader: {
     marginLeft: '10px',

@@ -23,8 +23,8 @@ export interface HeaderProps {
 const NAV_LINKS_LIST = [
   { label: 'Home', target: routes.HOME },
   { label: 'Explore', target: routes.RAFFLES },
-  { label: 'Stake', target: routes.STAKE },
-  { label: 'Tools', target: routes.TOOLS },
+  //{ label: 'Stake', target: routes.STAKE },
+  //{ label: 'Tools', target: routes.TOOLS },
   { label: 'Admin Panel', target: routes.ADMIN.HOME, admin: true },
 ];
 
@@ -42,8 +42,7 @@ const Header: FC<HeaderProps> = ({ onBackNavigation }) => {
           width: '100%',
           height: device === DeviceType.Phone ? '50px' : '90px',
           background:
-            'linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2))',
-          backdropFilter: 'blur(3px)',
+            '#000',
           zIndex: 98,
         }}
       />
@@ -73,11 +72,10 @@ const Header: FC<HeaderProps> = ({ onBackNavigation }) => {
           <>
             <div>
               <IconButton
-                onClick={() => push(routes.HOME)}
-                className={classes.homeButton}
+                  onClick={() => window.location.assign('https://metakitchen.io')}
+                  className={classes.homeButton}
               >
-                <img
-                  src="/dRaffle-LC-banner.png"
+                <img src="/mk.jpeg"
                   alt={'Site banner'}
                   className={classes.homeButtonIcon}
                 />
