@@ -35,10 +35,10 @@ const testWhitelist = new Map<string, RaffleMetaData>([
 
 const prodWhitelist = new Map<string, RaffleMetaData>([
   [
-    'FnHwnXGBz7NRZEsT8u12pE2cxURt8mYHQZykzmRtjb27',
+    '8eN6xbpE1Q1KDTRQxe6ZQxzySPdskSMVdqqQZPHmJZAi',
     {
-      name: 'dRaffle launch raffle',
-      overviewImageUri: '/resources/001-mainnet-launch.gif',
+      name: '10 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
     },
   ],
   [

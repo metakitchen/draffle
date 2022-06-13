@@ -68,14 +68,60 @@ const tokenRegistry = {
     logoURI: '/dRaffle-logo.png',
     tags: []
   },
+  '6dL3JDU3MvbqijiR5KUkGqyPHRaphf4G1eecTMspgrPX': {
+    chainId: 101,
+    address: '6dL3JDU3MvbqijiR5KUkGqyPHRaphf4G1eecTMspgrPX',
+    symbol: 'mK Prize',
+    name: 'mK Prize Token',
+    decimals: 0,
+    logoURI: '/mk.jpeg',
+    tags: [],
+  },
+  '9Lvhs8TqYx64KmmxWCeYUrMdp77JFGCtVcm5oVEHbYss': {
+    chainId: 101,
+    address: '9Lvhs8TqYx64KmmxWCeYUrMdp77JFGCtVcm5oVEHbYss',
+    symbol: 'mK Prize',
+    name: 'mk Prize Token',
+    decimals: 0,
+    logoURI: '/mk.jpeg',
+    tags: [],
+  },
+  '7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx': {
+    chainId: 101,
+    address: '7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx',
+    symbol: 'OG Chef Free Mint',
+    name: 'OG Chef Free MintToken',
+    decimals: 0,
+    logoURI: '/mk.jpeg',
+    tags: [],
+  },
+  '3bJAakFQ2c2k2UVYuSBaSu7k8mWgem7XvbhfXm4w9rtT': {
+    chainId: 101,
+    address: '3bJAakFQ2c2k2UVYuSBaSu7k8mWgem7XvbhfXm4w9rtT',
+    symbol: 'Free Mint Token OG Chef',
+    name: 'Dev Free Mint Token OG Chef',
+    decimals: 0,
+    logoURI: '/mk.jpeg',
+    tags: [],
+  },
+  '7BPCwgL97UMWcSuyUmDdNTzGnDvruyfGKTmUaSbLzohP': {
+    chainId: 101,
+    address: '7BPCwgL97UMWcSuyUmDdNTzGnDvruyfGKTmUaSbLzohP',
+    symbol: 'CHEF',
+    name: 'Chef Coin',
+    decimals: 0,
+    logoURI: 'https://metakitchen.io/static/media/mk.66f4827037442397afe6.jpeg',
+    tags: [],
+  },
   '7XvniZcazdU139kjNUsqeeLvJGtTGEFfbwJTGhpxUur': {
     chainId: 101,
     address: '7XvniZcazdU139kjNUsqeeLvJGtTGEFfbwJTGhpxUur',
     symbol: 'TestCoin',
-    name: 'TestCoin',
+    name: 'Test Coin',
     decimals: 0,
-    logoURI: '/resources/samo-logo.png',
-    tags: []
+    logoURI:
+        'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/ENNuzbdv7MiT9fjg7ApC2Fyf2F67PWww5Trm6A7W1BSn/logo.png',
+    tags: [],
   }
 };
 
