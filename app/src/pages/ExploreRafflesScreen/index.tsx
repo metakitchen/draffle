@@ -86,9 +86,6 @@ const ExploreRafflesScreen: FC = () => {
           No dRaffles to display.
         </Typography>
       )}
-        <Typography variant="h4" className={classes.pastRaffles}>
-            <a href="https://metakitchenraffle.onrender.com">View Past Raffles</a>
-        </Typography>
     </>
   );
 };
