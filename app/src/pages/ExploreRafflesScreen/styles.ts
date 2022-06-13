@@ -16,6 +16,11 @@ export const useStyles = makeStyles<Theme, { device: DeviceType }>(
       marginTop: '100px',
       textAlign: 'center',
     },
+      pastRaffles: {
+          marginTop: '10px',
+          marginBottom: '50px',
+          textAlign: 'center',
+      },
     raffleCardContainer: ({ device }) => ({
       margin:
         device === DeviceType.Phone ? '0 10px 20px 10px' : '0 40px 50px 40px',

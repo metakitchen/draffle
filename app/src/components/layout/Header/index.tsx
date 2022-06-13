@@ -79,6 +79,7 @@ const Header: FC<HeaderProps> = ({ onBackNavigation }) => {
                   alt={'Site banner'}
                   className={classes.homeButtonIcon}
                 />
+                  <h1><span style={{color: 'white'}}>mK</span>Pantry</h1>
               </IconButton>
             </div>
             <div className={classes.navContainer}>
