@@ -435,7 +435,7 @@ const HowTo: FC = () => {
               listing an NFT on a marketplace, or spending your last few USDC on
               one of our upcoming Raffles are all ordinary actions that leave
               an empty account cluttering your wallet, sometimes forever... At
-              the dRaffle Luck Club, we like to keep things tidy, which is why
+              the metaKitchen, we like to keep things tidy, which is why
               we’ve created this simple and nifty tool to help you clean these
               up and regain{' '}
               <span className={classes.highlightPrimary}>
