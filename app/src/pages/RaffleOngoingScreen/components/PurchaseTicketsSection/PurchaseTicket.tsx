@@ -231,11 +231,13 @@ export const PurchaseTickets: FC<PurchaseTicketsProps> = ({
 
   const maxTicketsToBuyable = useMemo(() => {
     if (!buyerTokenBalance.amount) return new u64(0);
-    const newMax = buyerTokenBalance.amount
+    let newMax = buyerTokenBalance.amount
       .mul(paymentOption.dispenserPriceOut)
       .div(paymentOption.dispenserPriceIn)
       .div(raffle.proceeds.ticketPrice);
-
+    if(newMax.gtn(500)) {
+      newMax = new u64(500)
+    }
     if (
       paymentOption.mint.publicKey.toString() ===
         buyerTokenBalance.mint.toString() &&

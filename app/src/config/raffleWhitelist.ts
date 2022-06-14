@@ -42,10 +42,10 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
     },
   ],
   [
-    '2QjkshNu3mrcCnriekTpppa3PFwnAR9Yf7v5vc54m2Yh',
+    'AkzbLBJmP6kadhYzSMn9Z3iwQ2N5vR5TssaQuB8csR9H',
     {
-      name: 'First SOL raffle',
-      overviewImageUri: '/resources/solana-logo.gif',
+      name: '10 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
     },
   ],
   [
