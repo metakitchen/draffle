@@ -4,12 +4,18 @@ import { DISPENSER_PROGRAM_ID, DISPENSER_REGISTRY_ADDRESS } from './programIds';
 
 export const ADMIN_ACCOUNTS = TESTING
   ? [
-      '7rb5BqRA7TJgbD5zeJmhJgz9EMTgDzPKLbpdxtu2p4S4',
-        '8yDHnibVDAy8hZqnThGEp2BX3555pJC81iv4PDxJz2mF'
+        'PeRq2L7uPQpabwMo4bpsVdDjaMRz9P7hb61LYTsUCjw',
+        '8yDHnibVDAy8hZqnThGEp2BX3555pJC81iv4PDxJz2mF',
+        '7rb5BqRA7TJgbD5zeJmhJgz9EMTgDzPKLbpdxtu2p4S4',
+        'H71RvvgBSC4danyWkXgMJZNYDdDXnCGyH9YKRgXF6idj',
+        '9jKHqYTiR6rnh5Sdp9csFR66fZgUo38y6C6oZdp7nwpL',
     ]
   : [
-      '7rb5BqRA7TJgbD5zeJmhJgz9EMTgDzPKLbpdxtu2p4S4',
-        '8yDHnibVDAy8hZqnThGEp2BX3555pJC81iv4PDxJz2mF'
+        'PeRq2L7uPQpabwMo4bpsVdDjaMRz9P7hb61LYTsUCjw',
+        '8yDHnibVDAy8hZqnThGEp2BX3555pJC81iv4PDxJz2mF',
+        '7rb5BqRA7TJgbD5zeJmhJgz9EMTgDzPKLbpdxtu2p4S4',
+        'H71RvvgBSC4danyWkXgMJZNYDdDXnCGyH9YKRgXF6idj',
+        '9jKHqYTiR6rnh5Sdp9csFR66fZgUo38y6C6oZdp7nwpL',
     ];
 
 export const [VAULT_TOKEN_IN] = utils.publicKey.findProgramAddressSync(
