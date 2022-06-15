@@ -73,9 +73,9 @@ const AdminRaffleScreen: FC = () => {
           <Spacer height={'20px'} />
           {[...currentRaffle.entrants.entries()].map(([wallet, tickets]) => (
             <div key={wallet} className={classes.entrantRow}>
-              <Typography variant="body1">{wallet}: </Typography>
-              <Typography variant="body1">
-                {tickets.tickets.toString()}
+              <Typography className={classes.wallet}>{wallet}</Typography>
+              <Typography className={classes.tickets}>
+                {tickets.tickets.length}
               </Typography>
             </div>
           ))}

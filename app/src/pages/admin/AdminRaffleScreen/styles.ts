@@ -5,20 +5,29 @@ export const useStyles = makeStyles<Theme>((theme: Theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'left',
     height: '100%',
     width: '100%',
   },
   headerContainer: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'left',
+    alignItems: 'left',
   },
   entrantRow: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'left',
+  },
+  wallet: {
+    width: '400px',
+    fontFamily: 'monospace'
+  },
+  tickets: {
+    wdth: '100px',
+    fontFamily: 'monospace'
+
   },
   walletButtonContainer: {
     margin: '20px 0 0 0',
