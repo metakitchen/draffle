@@ -49,10 +49,24 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
     },
   ],
   [
-    '8aEm1MoDqkYT5vCB21jC6aMMcMbdQJgmHpyBbtHDfUjU',
+    'oVwFKCKMVZyymMx7KPbjhPQbUfY4zD4MgHS4yycKn2e',
     {
-      name: 'Anti Artist Club',
-      overviewImageUri: '/resources/aartist-raffle-overview.gif',
+      name: '3 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
+    },
+  ],
+  [
+    'FdHqRXi6HihJNaCQfZnjUKhUjkujphh7oSE7b3Lhug7x',
+    {
+      name: '3 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
+    },
+  ],
+  [
+    '3SNWcUaSPJpKQaYpjVCAxXjzwMQggjMQrVbQEP8uo3zK',
+    {
+      name: '3 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
     },
   ],
   [
