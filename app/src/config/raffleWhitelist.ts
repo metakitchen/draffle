@@ -70,10 +70,9 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
     },
   ],
   [
-    '2ziwAj4awgvNyn8ywwjkBRkBsmv259u9vVyEdrGYTb54',
+    '3q7SVXixY5WHbaZVrX4PfjowKfiuEpccw2bcYx2qSsYt',
     {
-      name: 'More SOL',
-      overviewImageUri: '/resources/solana-logo.gif',
+      name: 'Ganja Gators #4401 (GAGMI) NFT',
     },
   ],
   [
