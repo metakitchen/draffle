@@ -316,7 +316,8 @@ pub mod draffle {
         let raffle = &ctx.accounts.raffle;
         let entrants = &ctx.accounts.entrants;
         if (raffle.claimed_prizes != raffle.total_prizes) && entrants.total != 0 {
-            return Err(RaffleError::UnclaimedPrizes.into());
+            //return Err(RaffleError::UnclaimedPrizes.into());
+            msg!("Unclaimed Prizes");
         }
 
         Ok(())
