@@ -76,10 +76,24 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
     },
   ],
   [
-    'EgHys3WPcM5WRpKqVHs1REfK6Npzq9sJ7dZPFPzQy2xG',
+    '5agamG4WbuGCzMYzehQPVq3NNKQKVrvPBhFJmgAT7yBu',
     {
-      name: 'Triple SOL',
-      overviewImageUri: '/resources/solana-logo-x3.gif',
+      name: '5 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
+    },
+  ],
+  [
+    '8WA58M2RZjL8ZenXGAwFBd14c4YVwKy54jH3bBHJmEvF',
+    {
+      name: '5 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
+    },
+  ],
+  [
+    'Y5KCuwF55kz177GYpE9WrQQWkujGpRL3ZEB7BwWzNtM',
+    {
+      name: '5 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
     },
   ],
   [

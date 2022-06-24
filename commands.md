@@ -24,9 +24,9 @@ solana config set -k ~/.config/solana/mint-keypair.json
    ```bash
    target/debug/draffle create-raffle \
        7BPCwgL97UMWcSuyUmDdNTzGnDvruyfGKTmUaSbLzohP \
-       3 \
-       "2022-06-14 23:00" \
-       --max-entrants 2000 \
+       5 \
+       "2022-06-26 23:00" \
+       --max-entrants 6000 \
        --provider.cluster mainnet \
        --provider.wallet ~/.config/solana/mint-keypair.json \
        --program-id RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J
@@ -67,10 +67,54 @@ solana config set -k ~/.config/solana/mint-keypair.json
 
    ```bash
    target/debug/draffle add-prize \
-       8eN6xbpE1Q1KDTRQxe6ZQxzySPdskSMVdqqQZPHmJZAi \
+       Y5KCuwF55kz177GYpE9WrQQWkujGpRL3ZEB7BwWzNtM \
        7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
        1 \
        0 \
+       --provider.cluster mainnet \
+       --provider.wallet ~/.config/solana/mint-keypair.json \
+       --program-id RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J
+   ```
+
+   ```bash
+   target/debug/draffle add-prize \
+       Y5KCuwF55kz177GYpE9WrQQWkujGpRL3ZEB7BwWzNtM \
+       7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
+       1 \
+       1 \
+       --provider.cluster mainnet \
+       --provider.wallet ~/.config/solana/mint-keypair.json \
+       --program-id RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J
+   ```
+
+   ```bash
+   target/debug/draffle add-prize \
+       Y5KCuwF55kz177GYpE9WrQQWkujGpRL3ZEB7BwWzNtM \
+       7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
+       1 \
+       2 \
+       --provider.cluster mainnet \
+       --provider.wallet ~/.config/solana/mint-keypair.json \
+       --program-id RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J
+   ```
+
+   ```bash
+   target/debug/draffle add-prize \
+       Y5KCuwF55kz177GYpE9WrQQWkujGpRL3ZEB7BwWzNtM \
+       7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
+       1 \
+       3 \
+       --provider.cluster mainnet \
+       --provider.wallet ~/.config/solana/mint-keypair.json \
+       --program-id RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J
+   ```
+
+   ```bash
+   target/debug/draffle add-prize \
+       Y5KCuwF55kz177GYpE9WrQQWkujGpRL3ZEB7BwWzNtM \
+       7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
+       1 \
+       4 \
        --provider.cluster mainnet \
        --provider.wallet ~/.config/solana/mint-keypair.json \
        --program-id RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J
