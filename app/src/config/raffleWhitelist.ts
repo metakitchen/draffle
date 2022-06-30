@@ -97,17 +97,23 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
     },
   ],
   [
-    'CjzFZfrMW4D1jZVm5upCobRi96UYnQTk5cescSt12rhV',
+    'm3YizapUbBj4FrarBde5DX4BxFfbmJx3m2M8KMKME6X',
     {
-      name: 'SAMO raffle',
-      overviewImageUri: '/resources/samo-x3.gif',
+      name: '5 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
     },
   ],
   [
-    'EZtBKgWq66KT4jRKtd4VT3LWh3mVC4pwcCsqLzKas63G',
+    'A5Gs52hkoaMuwvfniPQr7BGSxV5MMyZkkUacWHQd9337',
     {
-      name: 'BitBoat raffle',
-      overviewImageUri: '/resources/bitboat-raffle.gif',
+      name: '5 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
+    },
+  ],
+  [
+    'Cg2zQWoWsw5obkm1vHh36TzECLNvC7oJX3Y3YbXuEt1r',
+    {
+      name: 'Baked Beavers #5306 NFT',
     },
   ],
 ]);
