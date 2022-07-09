@@ -173,7 +173,7 @@ export const PurchaseTickets: FC<PurchaseTicketsProps> = ({
     updateLamports();
     timerId = setInterval(() => {
       updateLamports();
-    }, 5000);
+    }, 30000);
     return () => clearInterval(timerId);
   }, [
     walletLamports,
