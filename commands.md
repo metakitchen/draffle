@@ -25,7 +25,7 @@ solana config set -k ~/.config/solana/mint-keypair.json
    target/debug/draffle create-raffle \
        7BPCwgL97UMWcSuyUmDdNTzGnDvruyfGKTmUaSbLzohP \
        6 \
-       "2022-07-03 12:00" \
+       "2022-07-11 12:00" \
        --max-entrants 6000 \
        --provider.cluster mainnet \
        --provider.wallet ~/.config/solana/mint-keypair.json \
@@ -67,8 +67,8 @@ solana config set -k ~/.config/solana/mint-keypair.json
 
    ```bash
    target/debug/draffle add-prize \
-        Cg2zQWoWsw5obkm1vHh36TzECLNvC7oJX3Y3YbXuEt1r \
-       7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
+        HvVkXuBUfUtwqNCHRjcmN4TWLj1SJX5rcreVCK37i5hi \
+       2kp3jfMBK6KzNV6fXLaZTzGBj13ihPeJWS5LRNWHQN2s \
        1 \
        0 \
        --provider.cluster mainnet \
@@ -78,7 +78,7 @@ solana config set -k ~/.config/solana/mint-keypair.json
 
    ```bash
    target/debug/draffle add-prize \
-        Cg2zQWoWsw5obkm1vHh36TzECLNvC7oJX3Y3YbXuEt1r \
+        GheJSXFCHQ8YWWyLgCW8UKh4QpJGghmVg72mJggKfYRg \
        7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
        1 \
        1 \
@@ -89,7 +89,7 @@ solana config set -k ~/.config/solana/mint-keypair.json
 
    ```bash
    target/debug/draffle add-prize \
-        Cg2zQWoWsw5obkm1vHh36TzECLNvC7oJX3Y3YbXuEt1r \
+        GheJSXFCHQ8YWWyLgCW8UKh4QpJGghmVg72mJggKfYRg \
        7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
        1 \
        2 \
@@ -100,7 +100,7 @@ solana config set -k ~/.config/solana/mint-keypair.json
 
    ```bash
    target/debug/draffle add-prize \
-        Cg2zQWoWsw5obkm1vHh36TzECLNvC7oJX3Y3YbXuEt1r \
+        GheJSXFCHQ8YWWyLgCW8UKh4QpJGghmVg72mJggKfYRg \
        7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
        1 \
        3 \
@@ -111,7 +111,7 @@ solana config set -k ~/.config/solana/mint-keypair.json
 
    ```bash
    target/debug/draffle add-prize \
-        Cg2zQWoWsw5obkm1vHh36TzECLNvC7oJX3Y3YbXuEt1r \
+        GheJSXFCHQ8YWWyLgCW8UKh4QpJGghmVg72mJggKfYRg \
        7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
        1 \
        4 \
@@ -192,7 +192,7 @@ solana config set -k ~/.config/solana/mint-keypair.json
 
    ```bash
    target/debug/draffle close-entrants \
-       5agamG4WbuGCzMYzehQPVq3NNKQKVrvPBhFJmgAT7yBu \
+       Cg2zQWoWsw5obkm1vHh36TzECLNvC7oJX3Y3YbXuEt1r \
        --provider.cluster mainnet \
        --provider.wallet ~/.config/solana/mint-keypair.json \
        --program-id RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J

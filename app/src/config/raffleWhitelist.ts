@@ -116,6 +116,25 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
       name: 'Baked Beavers #5306 NFT',
     },
   ],
+  [
+    'GheJSXFCHQ8YWWyLgCW8UKh4QpJGghmVg72mJggKfYRg',
+    {
+      name: '3 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
+    },
+  ],
+  [
+    'BcEzEkpc7afsZu77RhBCxGFrBXVs6QiEfUfeqqhfzUZx',
+    {
+      name: 'Outlaws NFT',
+    },
+  ],
+  [
+    'HvVkXuBUfUtwqNCHRjcmN4TWLj1SJX5rcreVCK37i5hi',
+    {
+      name: 'Faceless Souls NFT',
+    },
+  ],
 ]);
 
 export const RAFFLES_WHITELIST = TESTING ? testWhitelist : prodWhitelist;
