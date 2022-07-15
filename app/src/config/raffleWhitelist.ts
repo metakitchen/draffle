@@ -135,6 +135,20 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
       name: 'Faceless Souls NFT',
     },
   ],
+  [
+    '8rHjmS7iCaHa9DLfCiVdYQDG5BonaNAZ9mNmaKNsL2hx',
+    {
+      name: 'Degen Boyz Dao #5182 NFT',
+    },
+  ],
+  [
+    'CaJCsAMfiigVSYBAxVX2HPQKAWejrEphuYeWzneiUxGA',
+    {
+      name: '3 OG Chef Free Mint Tokens',
+      overviewImageUri: 'mk.jpeg',
+    },
+  ],
+
 ]);
 
 export const RAFFLES_WHITELIST = TESTING ? testWhitelist : prodWhitelist;
