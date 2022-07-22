@@ -18,7 +18,7 @@ export const useStyles = makeStyles<Theme>((theme: Theme) => ({
   },
   raffleGridItem: {
     width: '100%',
-    height: '100%',
+    //height: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

@@ -34,7 +34,7 @@ const AdminHomeScreen: FC = () => {
   >([]);
 
   useEffect(() => {
-    fetchAllRaffles(true);
+    fetchAllRaffles();
   }, [fetchAllRaffles]);
 
   useEffect(() => {

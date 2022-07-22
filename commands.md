@@ -192,7 +192,7 @@ solana config set -k ~/.config/solana/mint-keypair.json
 
    ```bash
    target/debug/draffle close-entrants \
-       8WA58M2RZjL8ZenXGAwFBd14c4YVwKy54jH3bBHJmEvF \
+       GheJSXFCHQ8YWWyLgCW8UKh4QpJGghmVg72mJggKfYRg \
        --provider.cluster mainnet \
        --provider.wallet ~/.config/solana/mint-keypair.json \
        --program-id RAfqHaNYVVNoc5Xj5fgpZD9QRXothdxQ2frNsDCvc5J

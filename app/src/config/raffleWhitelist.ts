@@ -34,95 +34,24 @@ const testWhitelist = new Map<string, RaffleMetaData>([
 ]);
 
 const prodWhitelist = new Map<string, RaffleMetaData>([
-  [
-    '8eN6xbpE1Q1KDTRQxe6ZQxzySPdskSMVdqqQZPHmJZAi',
-    {
-      name: '10 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
-  [
-    'AkzbLBJmP6kadhYzSMn9Z3iwQ2N5vR5TssaQuB8csR9H',
-    {
-      name: '10 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
-  [
-    'oVwFKCKMVZyymMx7KPbjhPQbUfY4zD4MgHS4yycKn2e',
-    {
-      name: '3 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
-  [
-    'FdHqRXi6HihJNaCQfZnjUKhUjkujphh7oSE7b3Lhug7x',
-    {
-      name: '3 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
-  [
-    '3SNWcUaSPJpKQaYpjVCAxXjzwMQggjMQrVbQEP8uo3zK',
-    {
-      name: '3 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
+
   [
     '3q7SVXixY5WHbaZVrX4PfjowKfiuEpccw2bcYx2qSsYt',
     {
       name: 'Ganja Gators #4401 (GAGMI) NFT',
     },
   ],
-  [
-    '5agamG4WbuGCzMYzehQPVq3NNKQKVrvPBhFJmgAT7yBu',
-    {
-      name: '5 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
-  [
-    '8WA58M2RZjL8ZenXGAwFBd14c4YVwKy54jH3bBHJmEvF',
-    {
-      name: '5 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
-  [
-    'Y5KCuwF55kz177GYpE9WrQQWkujGpRL3ZEB7BwWzNtM',
-    {
-      name: '5 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
-  [
-    'm3YizapUbBj4FrarBde5DX4BxFfbmJx3m2M8KMKME6X',
-    {
-      name: '5 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
-  [
-    'A5Gs52hkoaMuwvfniPQr7BGSxV5MMyZkkUacWHQd9337',
-    {
-      name: '5 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
+
+
+
+
   [
     'Cg2zQWoWsw5obkm1vHh36TzECLNvC7oJX3Y3YbXuEt1r',
     {
       name: 'Baked Beavers #5306 NFT',
     },
   ],
-  [
-    'GheJSXFCHQ8YWWyLgCW8UKh4QpJGghmVg72mJggKfYRg',
-    {
-      name: '3 OG Chef Free Mint Tokens',
-      overviewImageUri: 'mk.jpeg',
-    },
-  ],
+
   [
     'BcEzEkpc7afsZu77RhBCxGFrBXVs6QiEfUfeqqhfzUZx',
     {
