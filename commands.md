@@ -25,7 +25,7 @@ solana config set -k ~/.config/solana/mint-keypair.json
    target/debug/draffle create-raffle \
        7BPCwgL97UMWcSuyUmDdNTzGnDvruyfGKTmUaSbLzohP \
        6 \
-       "2022-07-17 22:00" \
+       "2022-07-25 00:00" \
        --max-entrants 6000 \
        --provider.cluster mainnet \
        --provider.wallet ~/.config/solana/mint-keypair.json \
@@ -67,8 +67,8 @@ solana config set -k ~/.config/solana/mint-keypair.json
 
    ```bash
    target/debug/draffle add-prize \
-       CaJCsAMfiigVSYBAxVX2HPQKAWejrEphuYeWzneiUxGA \
-       7nW2ezNL7nmLy2xkFUCak2BtVCzsXY5A7LdZ7w5rJWAx \
+       7dMCWd7u7rebeXYigyqhTVx6Knwb27BU2UA2hoUMstem \
+       J8c2Ec5mzzDY7A1Rsq3USySFwt2XQyWBmVtMiciiJ3MC \
        1 \
        0 \
        --provider.cluster mainnet \
