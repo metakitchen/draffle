@@ -81,6 +81,13 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
             name: 'Degen Boyz Dao #5509 NFT',
         },
     ],
+    [
+        'GT6hkdivE53oEdTPZCmvVEEtummhek3PGFjA7rwab1Kw',
+        {
+            name: '3 OG Chef Free Mint Tokens',
+            overviewImageUri: 'mk.jpeg',
+        },
+    ],
 
 ]);
 
