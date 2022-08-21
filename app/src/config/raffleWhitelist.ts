@@ -69,13 +69,6 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
         },
     ],
     [
-        'CaJCsAMfiigVSYBAxVX2HPQKAWejrEphuYeWzneiUxGA',
-        {
-            name: '3 OG Chef Free Mint Tokens',
-            overviewImageUri: 'mk.jpeg',
-        },
-    ],
-    [
         '7dMCWd7u7rebeXYigyqhTVx6Knwb27BU2UA2hoUMstem',
         {
             name: 'Degen Boyz Dao #5509 NFT',
@@ -86,6 +79,13 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
         {
             name: '3 OG Chef Free Mint Tokens',
             overviewImageUri: 'mk.jpeg',
+        },
+    ],
+    [
+        'BEoVfGrKahUpRZE63av4SijnQB2Hq1PBtXFj3VTfjocn',
+        {
+            name: 'Monquiat #2105 (MONQT)',
+
         },
     ],
 
