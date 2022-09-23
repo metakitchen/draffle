@@ -88,7 +88,28 @@ const prodWhitelist = new Map<string, RaffleMetaData>([
 
         },
     ],
+    [
+        '6kpWTXSgK1qWfLX99jKABofGEdZ1FxBLLWkssjFT2pmh',
+        {
+            name: 'Flamboyant Panthers #1951 (FP)',
 
+        },
+    ],
+    //
+    [
+        'F6vZgySpTyjWos5RvJ5vvy99i57CWzCYDG8e4bmN6yfL',
+        {
+            name: 'toadzterz #3409 (tdz)',
+
+        },
+    ],
+    [
+        '6JifCfQGcmNJCaRVSbR4XWv9eLJLbbdWMSbgwQY2ik5B',
+        {
+            name: '5 OG Chef Free Mint Tokens',
+            overviewImageUri: 'mk.jpeg',
+        },
+    ],
 ]);
 
 export const RAFFLES_WHITELIST = TESTING ? testWhitelist : prodWhitelist;
